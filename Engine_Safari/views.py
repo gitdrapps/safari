@@ -7,4 +7,4 @@ def index(request):
     'title'		: 'Portal | Taman Safari Indonesia',
     'info'		: 'Admin website Taman Safari Bogor harap update konten',
   }
-return render(request, 'index.html', context)
+  return render(request, 'index.html', context)
