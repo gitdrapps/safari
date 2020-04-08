@@ -1,0 +1,484 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app-style %}
+
+  
+  <style type="text/css">
+    .bg-gradient-skin {
+      background: url('{% static "vendor/bootstrap/assets/img/bg-nav.jpg" %}') repeat-x;
+      height: 100%;
+    }
+
+    .active-skin {
+      background: url('{% static "vendor/bootstrap/assets/img/bg-nav-active.jpg" %}') repeat-x;
+      position: relative;
+      top: -4px;
+      height: 120%;
+      font-weight: 700;
+      color: #fff !important;
+      padding-top: 9px;
+    }
+
+    .inactive-access {
+      cursor: not-allowed;
+    }
+
+    .link-box:hover{
+      background-color: #a0ffc9;
+      transition: 0.5s;
+    }
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      background: transparent;
+    }
+  </style>
+  
+  {% endblock app-style %}
+
+
+
+
+  {% block app-body %}
+    <body class="hold-transition layout-top-nav">
+<div class="wrapper">
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white bg-gradient-skin p-1">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#"><span class="text-teal">PORTAL CMS</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link first-link border-left active-skin">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle border-left">Pengaturan</a>
+              <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                <li><a href="#" class="dropdown-item">Basic Configuration</a></li>
+                <li><a href="#" class="dropdown-item">Appreance Configuration</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="dropdownSubMenu2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle border-left">Laporan</a>
+              <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                <li><a href="#" class="dropdown-item">Log User Report</a></li>
+                <li><a href="#" class="dropdown-item">Resume Content Report</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link border-left">Dokumentasi</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link border-left border-right">Karir</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item dropdown">
+              <a id="dropdownSubMenu3" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle border-left border-right">Hari Sutrisno</a>
+              <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                <li><a href="#" class="dropdown-item">Profiles </a></li>
+                <li><a href="#" class="dropdown-item">Change Password</a></li>
+
+                <li class="dropdown-divider"></li>
+
+                <!-- Level two dropdown-->
+                <li class="dropdown-submenu dropdown-hover">
+                  <li><a href="index.html" class="dropdown-item">Logout</a></li>
+                </li>
+                <!-- End Level two -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- /.navbar -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-lg-2 col-6">
+            <h5 class="bg-olive p-2">
+              <i class="fas fa-info-circle pl-3 pr-2 pb-2"></i>
+              Informasi
+            </h5>
+          </div>
+
+          <div class="col-lg-10 col-6" style="margin-left: -10px; padding-right: 0;">
+            <div class="bg-white pl-2 pr-3 pb-1">
+              <div class="p-2 text-success marquee">
+                <span>{{info}}</span> <b class="pl-2 pr-2 text-bold text-orange">|</b>
+                <span>{{info}}</span> <b class="pl-2 pr-2 text-bold text-orange">|</b>
+                <span>{{info}}</span> <b class="pl-2 pr-2 text-bold text-orange">|</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.container -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-maroon">
+              <div class="inner">
+                <h4 class="text-bold">150,000,000</h4>
+
+                <p>Total Visitor</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-purple">
+              <div class="inner">
+                <h4 class="text-bold">19,000</h4>
+
+                <p>Visitor Today</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-calendar-day"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-orange">
+              <div class="inner">
+                <h4 class="text-bold">7</h4>
+
+                <p>Admin Online</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-lime">
+              <div class="inner">
+                <h4 class="text-bold">65</h4>
+
+                <p>Online Visitors</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-signal"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h4 class="text-bold">5</h4>
+
+                <p>Total County</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-globe-asia"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-teal">
+              <div class="inner">
+                <h4 class="text-bold">5</h4>
+
+                <p>Active Website</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+
+        <div class="row mt-3"> 
+          <div class="col-md-12">
+          <div class="card border border-left-0 border-right-0 border-success rounded-0" style="box-shadow: none;">
+            <div class="card-header border-bottom border-success">
+              <div class="p-1 border-outline-success">
+                <h3 class="card-title text-olive">
+                  <i class="fas fa-desktop pr-2"></i>
+                  Daftar Website
+                </h3>
+
+                <div class="float-right">
+                  <a href="dashboard-disabled.html" class="text-info">
+                    Disable Access <i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html">
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/top-box.jpg" %}') center no-repeat; height: 149px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html">
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/tamansafari_bogor.jpeg" %}') center no-repeat; height: 150px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html">
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/tamansafari_prigen.jpeg" %}') center no-repeat; height: 150px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html"> 
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/tamansafari_batang.jpeg" %}') center no-repeat; height: 150px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html">
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/tamansafari_royal.jpeg" %}') center no-repeat; height: 150px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html">
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/tamansafari_lodge.jpeg" %}') center no-repeat; height: 150px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <a href="datatables.html">
+                  <div class="small-box bg-white" style="background-color: #80B33A !important; background: url('{% static "vendor/bootstrap/assets/img/tamansafari_baobab.jpeg" %}') center no-repeat; height: 150px; box-shadow: none;">
+                    <div class="inner">
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="row mt-3"> 
+          <div class="col-md-12">
+          <div class="card border border-left-0 border-right-0 border-success rounded-0" style="box-shadow: none;">
+            <div class="card-header border-bottom border-success">
+              <div class="p-1 border-outline-success">
+              <h3 class="card-title text-olive">
+                <i class="fas fa-cogs pr-2"></i>
+                Konfigurasi Aplikasi
+              </h3>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-12 rounded-0">
+                  <a href="#" class="text-dark">
+                    <div class="info-box link-box" style="box-shadow: none;">
+                      <span class="info-box-icon">
+                        <img src="{% static "vendor/bootstrap/assets/img/laporan.jpg" %}" class="rounded-circle">
+                      </span>
+
+                      <div class="info-box-content">
+                        <span class="info-box-text text-bold">Laporan</span>
+                        <span class="progress-description">
+                          Laporan Aktifitas
+                        </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                  </a>
+                  <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-4 col-sm-6 col-12 rounded-0">
+                  <a href="#" class="text-dark">
+                    <div class="info-box link-box" style="box-shadow: none;">
+                      <span class="info-box-icon">
+                        <img src="{% static "vendor/bootstrap/assets/img/pengguna.jpg" %}" class="rounded-circle">
+                      </span>
+
+                      <div class="info-box-content">
+                        <span class="info-box-text text-bold">Pengguna</span>
+                        <span class="progress-description">
+                          Kelola Pengguna
+                        </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </a>
+                </div>
+                <!-- /.col -->
+                <div class="col-md-4 col-sm-6 col-12 rounded-0">
+                  <a href="#" class="text-dark">
+                    <div class="info-box link-box" style="box-shadow: none;">
+                      <span class="info-box-icon">
+                        <img src="{% static "vendor/bootstrap/assets/img/running.jpg" %}" class="rounded-circle">
+                      </span>
+
+                      <div class="info-box-content">
+                        <span class="info-box-text text-bold">Running Text</span>
+                        <span class="progress-description">
+                          Kelola Running Text
+                        </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </a>
+                </div>
+                <!-- /.col -->
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div><!-- /.container -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer text-center">
+    <!-- To the right -->
+    <!-- <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div> -->
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2020 <a href="http://drapps-id" target="_blank">dr-apps.id</a>.</strong> All rights reserved.
+  </footer>
+</div>
+  
+
+  {% endblock app-body %}
+  
+  {% block app-js %}
+
+
+    <!-- Marquee js -->
+      <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+
+          
+      <!-- Menu Toggle Script -->
+      <script>
+        $(document).ready(function() {
+          viewportwidth = $(window).width();
+          if (viewportwidth < 992) {
+            $(".nav-link").removeClass('border-left');
+            $(".nav-link").removeClass('border-right');
+            $(".nav-link").addClass('border-bottom');
+            $(".nav-link").addClass('p-2');
+            $(".first-link").addClass('border-top');
+          }else{
+            $(".nav-link").removeClass('border-bottom');
+            $(".nav-link").removeClass('p-2');
+            $(".first-link").removeClass('border-top');
+          }
+
+          $('.marquee').marquee({
+            //duration in milliseconds of the marquee
+            duration: 15000,
+            //gap in pixels between the tickers
+            gap: 50,
+            //time in milliseconds before the marquee will start animating
+            delayBeforeStart: 0,
+            //'left' or 'right'
+            direction: 'left',
+            //true or false - should the marquee be duplicated to show an effect of continues flow
+            duplicated: true,
+            //pause on hover
+            pauseOnHover :true,
+          });
+
+        });
+
+        window.onresize = function(event) {
+          viewportwidth = $(window).width();
+          if (viewportwidth < 992) {
+            $(".nav-link").addClass('border-bottom');
+            $(".nav-link").addClass('p-2');
+            $(".first-link").addClass('border-top');
+            $(".nav-link").removeClass('border-left');
+            $(".nav-link").removeClass('border-right');
+          }else{
+            $(".nav-link").removeClass('border-bottom');
+            $(".nav-link").removeClass('p-2');
+            $(".first-link").removeClass('border-top');
+          }
+        }
+
+      </script>
+{% endblock app-js %}
+
+

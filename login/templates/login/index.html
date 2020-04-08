@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app-style %}
+    
+  <style type="text/css">
+    html,body { 
+      background: url({% static "vendor/bootstrap/assets/img/bg-login.jpg" %}) no-repeat center center fixed !important; 
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -o-background-size: cover !important;
+      background-size: cover !important;
+    }
+
+    .text-skin {
+      color: #155533;
+    }
+
+    .bg-skin {
+      background-color: #E9F1FE;
+    }
+
+    #showPassword {
+      cursor: pointer;
+    }
+  </style>
+  {% endblock app-style %}
+
+  {% block app-body %}
+    <body class="hold-transition login-page">
+      <div class="login-box">
+        <!-- 
+        <div class="login-logo">
+          <a href="../../index2.html"><b>Admin</b>LTE</a>
+        </div>
+        -->
+        <!-- /.login-logo -->
+        <div class="card rounded-lg pl-3 pr-3 pt-1 pb-1">
+          <div class="card-body login-card-body rounded-lg">
+            <!-- <p class="login-box-msg">Sign in to start your session</p> -->
+            <div class="text-center">
+              <img src="{% static "vendor/bootstrap/assets/img/logo.png" %}" width="100" height="100">
+              <h6 class="pt-2 pb-3 text-bold text-skin">PORTAL CMS TAMAN SAFARI INDONESIA</h6>
+            </div>
+            <form action="dashboard.html" method="post">
+              
+              <div class="form-group">
+                <label for="email" class="font-weight-normal">Alamat Email</label>
+                <div class="input-group-append">
+                  <div class="input-group-text rounded-0 bg-danger border-0">
+                    <span class="fas fa-envelope text-white"></span>
+                  </div>
+                  <input type="email" class="form-control rounded-0 bg-skin" id="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="font-weight-normal">Kata Sandi</label>
+                <div class="input-group-append">
+                  <div class="input-group-text rounded-0 bg-danger border-0">
+                    <span class="fas fa-key text-white"></span>
+                  </div>
+
+                  <input type="password" class="form-control rounded-0 bg-skin" id="password">
+
+                  <div class="input-group-text rounded-0 bg-white border-left-0" id="showPassword">
+                    <span id="iconPassword" class="fas fa-eye"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row pt-2">
+                <div class="col-7">
+                </div>
+                <div class="col-5">
+                  <button type="submit" class="btn btn-info btn-block">
+                    <i class="fa fas fa-sign-in-alt"></i> <span class="text-bold pl-2">Masuk</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+
+            <p class="mt-3 mb-1">
+              Lupa Password ? <a href="#">Klik disini</a>
+            </p>
+            
+          </div>
+          <!-- /.login-card-body -->
+        </div>
+      </div>
+      <!-- /.login-box -->
+
+  
+{% endblock app-body %}
+
+{% block app-js %}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#showPassword").click(function() {
+          if ($("#password").attr("type") == "password") {
+            $("#password").attr("type", "text");
+          } else {
+            $("#password").attr("type", "password");
+          }
+
+          $("#iconPassword").toggleClass("fa-eye fa-eye-slash");
+        });
+      });
+    </script>
+{% endblock app-js %}
