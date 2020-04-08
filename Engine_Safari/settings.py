@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'safari_db',
-        'USER': 'postgres',
+        'USER': 'safari',
         'PASSWORD': 'F0r3n51c',
         'HOST': '127.0.0.1',
         'PORT': '5432',
